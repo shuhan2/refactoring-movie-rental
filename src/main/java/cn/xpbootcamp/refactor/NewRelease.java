@@ -8,7 +8,6 @@ public class NewRelease extends Rental {
 
   @Override
   double getAmount() {
-
     return getDaysRented() * 3;
   }
 }

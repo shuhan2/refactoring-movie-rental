@@ -7,14 +7,14 @@ public class Movie {
     static final int NEW_RELEASE = 1;
 
     private String title;
-    private int priceCode;
+    private PriceCode priceCode;
 
-    Movie(String title, int priceCode) {
+    Movie(String title, PriceCode priceCode) {
         this.title = title;
         this.priceCode = priceCode;
     }
 
-    int getPriceCode() {
+    PriceCode getPriceCode() {
         return priceCode;
     }
 
