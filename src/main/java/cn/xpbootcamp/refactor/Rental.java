@@ -1,6 +1,6 @@
 package cn.xpbootcamp.refactor;
 
-public abstract class Rental {
+public class Rental {
 
     private Movie movie;
     private int daysRented;
@@ -18,6 +18,21 @@ public abstract class Rental {
         return daysRented;
     }
 
-    abstract double getAmount();
+    double getAmount(){
+        double amount ;
+        if (movie.getPriceCode() == PriceCode.CAMPUS) {
+            amount = 1.5;
+            if (getDaysRented() > 3)
+                amount += (getDaysRented() - 3) * 1.5;
+            return amount;
+        }
+        if(movie.getPriceCode() == PriceCode.HISTORY) {
+            amount =2;
+            if (getDaysRented() > 2)
+                amount += (getDaysRented() - 2) * 1.5;
+            return amount;
+        }
+        return getDaysRented() * 3;
+    };
 
 }
