@@ -1,6 +1,6 @@
 package cn.xpbootcamp.refactor;
 
-public class Rental {
+public abstract class Rental {
 
     private Movie movie;
     private int daysRented;
@@ -17,5 +17,7 @@ public class Rental {
     int getDaysRented() {
         return daysRented;
     }
+
+    abstract double getAmount();
 
 }
